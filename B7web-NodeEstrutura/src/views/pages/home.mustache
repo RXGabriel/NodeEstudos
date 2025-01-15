@@ -1,0 +1,35 @@
+{{>partials/header}}
+  
+  
+  Opa {{name}} {{lastName}},tudo bem?
+  {{#showOld}}
+    Como vai a vida?
+  {{/showOld}}
+
+  <hr/>
+
+  <h2>Lista de itens</h2>
+    <ul>
+    {{#products}}
+      {{>partials/product-item}}
+    {{/products}}
+    </ul>
+  <hr/>
+
+  <h2>Itens a partir de += de R$ 100</h2>
+    <ul>
+    {{#expensives}}
+      {{>partials/product-item}}
+    {{/expensives}}
+    </ul>
+
+  <hr/>
+
+
+  <ul>
+    {{#frasesDODia}}
+      <li>{{.}}</li>
+    {{/frasesDODia}}
+  </ul>
+
+{{>partials/footer}}
